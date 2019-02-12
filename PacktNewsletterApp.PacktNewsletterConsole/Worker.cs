@@ -1,3 +1,4 @@
+using System;
 using PacktNewsletterApp.Data;
 using PacktNewsletterApp.Data.MailSystem;
 using PacktNewsletterApp.MailSender;
@@ -30,10 +31,21 @@ namespace PacktNewsletterApp.PacktNewsletterConsole
 
         public void Run()
         {
-            var ebook = parser.Parse();
-            var recipients = recipientsService.GetAll();
-            var messages = messageFormer.FormMessages(recipients, ebook);
-            mailSender.Send(messages);
+            try
+            {
+                var ebook = parser.Parse();
+                var recipients = recipientsService.GetAll();
+                var messages = messageFormer.FormMessages(recipients, ebook);
+                mailSender.Send(messages);
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine($"{DateTime.Now} Argh exception!");
+                System.Console.WriteLine($"Message: {e.Message}");
+                System.Console.WriteLine($"Stack trace: {e.StackTrace}");
+                System.Console.WriteLine("**********************************");
+                System.Console.WriteLine();
+            }
         }
     }
 }
