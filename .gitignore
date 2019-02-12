@@ -346,3 +346,4 @@ recipients.json
 credentials.json
 token.json
 PacktNewsletterApp.DirtyTester
+.vscode/

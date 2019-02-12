@@ -2,7 +2,7 @@
 using MimeKit;
 using PacktNewsletterApp.Models.Data;
 
-namespace PacktNewsletterApp.Models.MailSender
+namespace PacktNewsletterApp.MailSender
 {
     public interface IMailSender
     {
