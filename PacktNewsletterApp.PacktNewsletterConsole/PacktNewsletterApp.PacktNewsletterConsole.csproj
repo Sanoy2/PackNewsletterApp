@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PacktNewsletterApp.Data\PacktNewsletterApp.Data.csproj" />
+    <ProjectReference Include="..\PacktNewsletterApp.MailSender\PacktNewsletterApp.MailSender.csproj" />
+    <ProjectReference Include="..\PacktNewsletterApp.PacktHtmlParser\PacktNewsletterApp.PacktHtmlParser.csproj" />
+  </ItemGroup>
+
 </Project>

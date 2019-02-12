@@ -10,7 +10,6 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using MailKit.Net.Smtp;
 using MimeKit;
-using PacktNewsletterApp.Models.MailSender;
 
 namespace PacktNewsletterApp.MailSender
 {
