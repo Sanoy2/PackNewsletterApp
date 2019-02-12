@@ -28,7 +28,6 @@ namespace PacktNewsletterApp.PacktHtmlParser
 
             ebook.Title = fullEbookDescription.title;
             ebook.CoverUrl = fullEbookDescription.coverImage;
-            ebook.PublishDate = fullEbookDescription.publicationDate;
 
             var description = ParseFeatures(fullEbookDescription.features);
 

@@ -9,7 +9,6 @@ namespace PacktNewsletterApp.Models.Data
     public class Ebook
     {
         public string Title { get; set; }
-        public DateTime PublishDate { get; set; }
         public string CoverUrl { get; set; }
         public List<string> Description { get; set; }
 
@@ -24,7 +23,6 @@ namespace PacktNewsletterApp.Models.Data
             builder.AppendLine("**********");
             builder.AppendLine($"Object of type: {this.GetType().Name}");
             builder.AppendLine($"{nameof(Title)}: {Title}");
-            builder.AppendLine($"{nameof(PublishDate)}: {PublishDate}");
             builder.AppendLine($"{nameof(CoverUrl)}: {CoverUrl}");
             builder.AppendLine($"{nameof(Description)}:");
             foreach (var item in Description)
