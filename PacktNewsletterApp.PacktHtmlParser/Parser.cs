@@ -14,8 +14,8 @@ namespace PacktNewsletterApp.PacktHtmlParser
 
         public Parser()
         {
-            jsonGetter = new JsonGetterMock();
-            //jsonGetter = new JsonGetter();
+            // jsonGetter = new JsonGetterMock();
+            jsonGetter = new JsonGetter();
         }
 
         public Ebook Parse()
