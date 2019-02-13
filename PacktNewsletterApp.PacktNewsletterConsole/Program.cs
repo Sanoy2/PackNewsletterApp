@@ -12,6 +12,7 @@ namespace PacktNewsletterApp.PacktNewsletterConsole
         {
             System.Console.WriteLine($"{DateTime.Now} Program starts");
             var worker = new Worker();
+            worker.Run();
         }
     }
 }
