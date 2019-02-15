@@ -26,19 +26,24 @@ namespace PacktNewsletterApp.MailSender
         private void SendAll(List<MimeMessage> mimeMessages)
         {
             var gmailService = GetGmailService();
+            var messages = TransformMimeMessages(mimeMessages);
 
-            foreach (var mimeMessage in mimeMessages)
+            foreach (var message in messages)
             {
-                var message = new Message()
-                {
-                    Raw = Base64UrlEncode(mimeMessage.ToString())
-                };
-
                 gmailService.Users.Messages.Send(message, "me").Execute();
             }
 
             Console.WriteLine("Done");
         }
+
+        private List<Message> TransformMimeMessages(List<MimeMessage> mimeMessages)
+        {
+            var messages = mimeMessages
+            .Select(n => new Message() { Raw = Base64UrlEncode(n.ToString()) })
+            .ToList();
+            return messages;  
+        }
+
 
         private GmailService GetGmailService()
         {
