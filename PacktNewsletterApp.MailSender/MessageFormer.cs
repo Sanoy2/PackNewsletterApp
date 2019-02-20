@@ -44,6 +44,12 @@ namespace PacktNewsletterApp.MailSender
             var builder = new BodyBuilder();
             builder.HtmlBody =
 $@"
+<!DOCTYPE html>
+<html>
+<header>
+<meta charset=""ISO-8859-1"">
+</header>
+<body>
 <h1><a href=""https://www.packtpub.com/"">PacktPub</a> free learning offer for today:</h1>
 <div>
 <table>
@@ -70,6 +76,8 @@ $@"
 <div>
 If you have any questions/suggestions or want to turn off this newsletter please contact me: krzysztof.tomkow@gmail.com
 </div>
+</body>
+</html>
 ";
 
             message.Body = builder.ToMessageBody();
@@ -81,7 +89,10 @@ If you have any questions/suggestions or want to turn off this newsletter please
             var builder = new StringBuilder();
             foreach (var item in description)
             {
-                builder.Append($"<li>{item}</li>");
+                byte[] bytes = Encoding.Default.GetBytes(item);
+                var text = Encoding.UTF8.GetString(bytes);
+                builder.Append($"<li>{text}</li>");
+                System.Console.WriteLine($"text: {text}");
             }
 
             return builder.ToString();
