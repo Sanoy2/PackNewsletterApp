@@ -3,8 +3,8 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using MimeKit;
+using PacktNewsletterApp.Data.Models;
 using PacktNewsletterApp.Data.MailSystem;
-using PacktNewsletterApp.Models.Data;
 
 namespace PacktNewsletterApp.MailSender
 {

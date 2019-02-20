@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace PacktNewsletterApp.Models.Data
+namespace PacktNewsletterApp.Data.Models
 {
     public class Ebook
     {

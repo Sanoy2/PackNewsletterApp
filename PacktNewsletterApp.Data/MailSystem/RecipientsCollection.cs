@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using PacktNewsletterApp.Data.MailSystem;
 
 namespace PacktNewsletterApp.Data.MailSystem
 {

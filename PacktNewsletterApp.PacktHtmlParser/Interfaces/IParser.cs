@@ -1,4 +1,4 @@
-﻿using PacktNewsletterApp.Models.Data;
+﻿using PacktNewsletterApp.Data.Models;
 
 namespace PacktNewsletterApp.PacktHtmlParser.Interfaces
 {

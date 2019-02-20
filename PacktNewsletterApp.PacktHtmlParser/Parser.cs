@@ -3,7 +3,7 @@ using System.Linq;
 using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
-using PacktNewsletterApp.Models.Data;
+using PacktNewsletterApp.Data.Models;
 using PacktNewsletterApp.PacktHtmlParser.Interfaces;
 
 namespace PacktNewsletterApp.PacktHtmlParser

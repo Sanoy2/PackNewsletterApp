@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using MimeKit;
+using PacktNewsletterApp.Data.Models;
 using PacktNewsletterApp.Data.MailSystem;
-using PacktNewsletterApp.Models.Data;
+
 
 namespace PacktNewsletterApp.MailSender
 {
