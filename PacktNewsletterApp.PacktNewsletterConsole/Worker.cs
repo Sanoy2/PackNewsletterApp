@@ -2,28 +2,29 @@ using System;
 using PacktNewsletterApp.Data;
 using PacktNewsletterApp.Data.MailSystem;
 using PacktNewsletterApp.MailSender;
-using PacktNewsletterApp.PacktHtmlParser;
+using PacktNewsletterApp.EbookDataGetter;
+using PacktNewsletterApp.EbookDataGetter.FreeEbook;
 
 namespace PacktNewsletterApp.PacktNewsletterConsole
 {
     public class Worker
     {
-        private Parser parser;
-        private IMailSender mailSender;
-        private IMessageFormer messageFormer;
-        private IRecipientsService recipientsService;
+        private readonly IEbookDataGetter freeEbookDataGetter;
+        private readonly IMailSender mailSender;
+        private readonly IMessageFormer messageFormer;
+        private readonly IRecipientsService recipientsService;
 
         public Worker()
         {
-            parser = new Parser();
+            freeEbookDataGetter = new FreeEbookDataGetter();
             mailSender = new MailSender.MailSender();
             messageFormer = new MessageFormer();
             recipientsService = new JsonRecipientsService();
         }
 
-        public Worker(Parser parser, IMailSender mailSender, IMessageFormer messageFormer, IRecipientsService recipientsService)
+        public Worker(IEbookDataGetter freeEbookDataGetter, IMailSender mailSender, IMessageFormer messageFormer, IRecipientsService recipientsService)
         {
-            this.parser = parser;
+            this.freeEbookDataGetter = freeEbookDataGetter;
             this.mailSender = mailSender;
             this.messageFormer = messageFormer;
             this.recipientsService = recipientsService;
@@ -33,7 +34,7 @@ namespace PacktNewsletterApp.PacktNewsletterConsole
         {
             try
             {
-                var ebook = parser.Parse();
+                var ebook = freeEbookDataGetter.GetEbook();
                 var recipients = recipientsService.GetAll();
                 var messages = messageFormer.FormMessages(recipients, ebook);
                 mailSender.Send(messages);

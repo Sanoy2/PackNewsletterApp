@@ -3,19 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktNewsletterApp.MailSender", "PacktNewsletterApp.MailSender\PacktNewsletterApp.MailSender.csproj", "{052E7C46-8BBB-4CBC-A06E-9B93DE4ACF36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacktNewsletterApp.MailSender", "PacktNewsletterApp.MailSender\PacktNewsletterApp.MailSender.csproj", "{052E7C46-8BBB-4CBC-A06E-9B93DE4ACF36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktNewsletterApp.PacktHtmlParser", "PacktNewsletterApp.PacktHtmlParser\PacktNewsletterApp.PacktHtmlParser.csproj", "{20CAE434-14C8-4F06-92A9-5BCC7E411D13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacktNewsletterApp.PacktNewsletterMVC", "PacktNewsletterApp.PacktNewsletterMVC\PacktNewsletterApp.PacktNewsletterMVC.csproj", "{18048D09-7FF3-4F8A-B234-00F2D4030232}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktNewsletterApp.PacktNewsletterMVC", "PacktNewsletterApp.PacktNewsletterMVC\PacktNewsletterApp.PacktNewsletterMVC.csproj", "{18048D09-7FF3-4F8A-B234-00F2D4030232}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacktNewsletterApp.Data", "PacktNewsletterApp.Data\PacktNewsletterApp.Data.csproj", "{8E2F83FC-5695-40B4-9D75-9B30EE2EDD3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktNewsletterApp.Data", "PacktNewsletterApp.Data\PacktNewsletterApp.Data.csproj", "{8E2F83FC-5695-40B4-9D75-9B30EE2EDD3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacktNewsletterApp.DirtyTester", "PacktNewsletterApp.DirtyTester\PacktNewsletterApp.DirtyTester.csproj", "{91C5B6EA-479F-4EB1-8508-511B12769B20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktNewsletterApp.DirtyTester", "PacktNewsletterApp.DirtyTester\PacktNewsletterApp.DirtyTester.csproj", "{91C5B6EA-479F-4EB1-8508-511B12769B20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacktNewsletterApp.EbookDataGetter", "PacktNewsletterApp.EbookDataGetter\PacktNewsletterApp.EbookDataGetter.csproj", "{79AE636A-8226-4234-BD04-196B9080CF3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktNewsletterApp.EbookDataGetter", "PacktNewsletterApp.EbookDataGetter\PacktNewsletterApp.EbookDataGetter.csproj", "{79AE636A-8226-4234-BD04-196B9080CF3E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktNewsletterApp.PacktNewsletterConsole", "PacktNewsletterApp.PacktNewsletterConsole\PacktNewsletterApp.PacktNewsletterConsole.csproj", "{1CE4EA84-E232-418C-88EA-8384422BC922}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacktNewsletterApp.PacktNewsletterConsole", "PacktNewsletterApp.PacktNewsletterConsole\PacktNewsletterApp.PacktNewsletterConsole.csproj", "{1CE4EA84-E232-418C-88EA-8384422BC922}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,9 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{052E7C46-8BBB-4CBC-A06E-9B93DE4ACF36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,18 +37,6 @@ Global
 		{052E7C46-8BBB-4CBC-A06E-9B93DE4ACF36}.Release|x64.Build.0 = Release|Any CPU
 		{052E7C46-8BBB-4CBC-A06E-9B93DE4ACF36}.Release|x86.ActiveCfg = Release|Any CPU
 		{052E7C46-8BBB-4CBC-A06E-9B93DE4ACF36}.Release|x86.Build.0 = Release|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Debug|x64.Build.0 = Debug|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Debug|x86.Build.0 = Debug|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Release|x64.ActiveCfg = Release|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Release|x64.Build.0 = Release|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Release|x86.ActiveCfg = Release|Any CPU
-		{20CAE434-14C8-4F06-92A9-5BCC7E411D13}.Release|x86.Build.0 = Release|Any CPU
 		{18048D09-7FF3-4F8A-B234-00F2D4030232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18048D09-7FF3-4F8A-B234-00F2D4030232}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18048D09-7FF3-4F8A-B234-00F2D4030232}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -114,5 +97,11 @@ Global
 		{1CE4EA84-E232-418C-88EA-8384422BC922}.Release|x64.Build.0 = Release|Any CPU
 		{1CE4EA84-E232-418C-88EA-8384422BC922}.Release|x86.ActiveCfg = Release|Any CPU
 		{1CE4EA84-E232-418C-88EA-8384422BC922}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73CB2275-8389-4B8C-876D-9E14E6357208}
 	EndGlobalSection
 EndGlobal

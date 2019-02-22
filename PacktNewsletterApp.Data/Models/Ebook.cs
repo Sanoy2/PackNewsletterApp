@@ -8,8 +8,21 @@ namespace PacktNewsletterApp.Data.Models
 {
     public class Ebook
     {
+        private string coverUrl;
+
         public string Title { get; set; }
-        public string CoverUrl { get; set; }
+
+        public string CoverUrl
+        {
+            get => coverUrl;
+            set => coverUrl = AdjustCoverUrl(value);
+        }
+
+        private string AdjustCoverUrl(string coverUrl)
+        {
+            return coverUrl.Replace(" ", "%20");
+        }
+
         public List<string> Description { get; set; }
 
         public Ebook()

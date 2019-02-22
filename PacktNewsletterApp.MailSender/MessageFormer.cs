@@ -92,7 +92,6 @@ If you have any questions/suggestions or want to turn off this newsletter please
                 byte[] bytes = Encoding.Default.GetBytes(item);
                 var text = Encoding.UTF8.GetString(bytes);
                 builder.Append($"<li>{text}</li>");
-                System.Console.WriteLine($"text: {text}");
             }
 
             return builder.ToString();

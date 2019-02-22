@@ -1,9 +1,4 @@
 ﻿using System;
-using PacktNewsletterApp.Data;
-using PacktNewsletterApp.Data.MailSystem;
-using PacktNewsletterApp.Data.Models;
-using PacktNewsletterApp.MailSender;
-using PacktNewsletterApp.PacktHtmlParser;
 namespace PacktNewsletterApp.PacktNewsletterConsole
 {
     class Program
