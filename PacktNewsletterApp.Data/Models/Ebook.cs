@@ -18,11 +18,6 @@ namespace PacktNewsletterApp.Data.Models
             set => coverUrl = AdjustCoverUrl(value);
         }
 
-        private string AdjustCoverUrl(string coverUrl)
-        {
-            return coverUrl.Replace(" ", "%20");
-        }
-
         public List<string> Description { get; set; }
 
         public Ebook()
@@ -53,6 +48,11 @@ namespace PacktNewsletterApp.Data.Models
                 Console.WriteLine("Message :{0} ", e.Message);
             }
             return builder.ToString();
+        }
+
+        private string AdjustCoverUrl(string coverUrl)
+        {
+            return coverUrl.Replace(" ", "%20");
         }
     }
 }
